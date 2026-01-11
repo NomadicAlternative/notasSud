@@ -1,1 +1,86 @@
-/* Add styles here */
+
+:root {
+    --sky-blue-light: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --deep-space-blue: #023047ff;
+    --amber-flame: #ffb703ff;
+    --princeton-orange: #fb8500ff;
+    --main-font: 'Roboto', sans-serif;
+    --text-color: var(--deep-space-blue);
+    --background-color: #fdfdfd;
+    --card-background: #ffffff;
+    --footer-background: var(--deep-space-blue);
+    --footer-text-color: var(--sky-blue-light);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --accent-color: var(--princeton-orange);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+}
+
+.site-header {
+    background-image: url('images/hero.jpg');
+    background-color: var(--deep-space-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Shadow for better readability */
+    animation: fadeInDown 1s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.site-header h1 {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.articles-grid h2 {
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 15px;
+    color: var(--deep-space-blue);
+}
+
+.site-footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+}
+
+.site-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: var(--amber-flame);
+    text-decoration: underline;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        min-height: 200px;
+    }
+
+    .site-header h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+}
